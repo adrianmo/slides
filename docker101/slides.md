@@ -13,11 +13,19 @@ by *Adrian Moreno*
 
 ----
 
-Figure monolithic app
+<!-- .slide: data-background="#fff" -->
+
+### <font color="#333">Monolithic app</font>
+
+![Monolithic App](images/monolithic-app2.png)
 
 ----
 
-Figure load-balanced monolithic app
+<!-- .slide: data-background="#fff" -->
+
+### <font color="#333">Monolithic Load-balanced app</font>
+
+![Monolithic LB App](images/monolithic-lb-app2.png)
 
 ----
 
@@ -30,7 +38,11 @@ Figure load-balanced monolithic app
 
 ----
 
-Figure modern app
+<!-- .slide: data-background="#fff" -->
+
+### <font color="#333">Modern app</font>
+
+![Modern App](images/modern-app.png)
 
 ----
 
@@ -42,19 +54,19 @@ Figure modern app
 
 ----
 
-Pianos
+<!-- .slide: data-background="images/piano.jpg" -->
 
 ----
 
-Pianos + Potatos
+<!-- .slide: data-background="images/piano-potatoes.png" -->
 
 ----
 
-Pianos + Potatos + Whiskey
+<!-- .slide: data-background="images/piano-potatoes-whiskey.png" -->
 
 ----
 
-# How do we handle all these differences?
+## How do we handle all these differences?
 
 - Size of goods
 - Form of goods
@@ -63,25 +75,28 @@ Pianos + Potatos + Whiskey
 
 ----
 
-Intermodal container
+<!-- .slide: data-background="images/intermodal-container.jpg" -->
 
 ----
 
 # Now you can ship everything!
 
-Figure vessel
+----
+
+<!-- .slide: data-background="images/container-vessel.jpg" -->
 
 ----
 
-Figure container truck
+<!-- .slide: data-background="images/truck-container.jpg" -->
 
 ----
 
-Figure train containers
+<!-- .slide: data-background="images/cargo-train.jpg" -->
 
 ----
 
-# Yes, but... what does it have to do with software?
+## Yes, but...
+## what does it have to do with software?
 
 ----
 
