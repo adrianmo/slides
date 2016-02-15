@@ -54,15 +54,15 @@ by *Adrian Moreno*
 
 ----
 
-<!-- .slide: data-background="images/piano.jpg" -->
+<!-- .slide: data-background="images/piano.jpg" data-background-size="80%" -->
 
 ----
 
-<!-- .slide: data-background="images/piano-potatoes.png" -->
+<!-- .slide: data-background="images/piano-potatoes.png" data-background-size="80%" -->
 
 ----
 
-<!-- .slide: data-background="images/piano-potatoes-whiskey.png" -->
+<!-- .slide: data-background="images/piano-potatoes-whiskey.png" data-background-size="80%" -->
 
 ----
 
@@ -100,51 +100,95 @@ by *Adrian Moreno*
 
 ----
 
-Figure software in containers
-
----
-
-# It worked in my computer
+## Your app is built out of many small parts
+## ...called micro services
 
 ----
 
-# The premise of Docker:
+<!-- .slide: data-background="#fff" -->
+![Web server](images/web-server.png)
 
-## Build once, run anywhere
+----
+
+<!-- .slide: data-background="#fff" -->
+![Database](images/database.png)
+
+----
+
+<!-- .slide: data-background="#fff" -->
+![Shopping cart](images/shopping-cart.png)
+
+----
+
+<!-- .slide: data-background="#fff" -->
+![Big Data](images/bigdata.png)
+
+----
+
+<!-- .slide: data-background="#fff" -->
+![Languages](images/app-languages.png)
+
+----
+
+## You can surely install it in a production server
+
+----
+
+## But... would it look the same in
+
+### your dev environment?
+### in a lab? <!-- .element: class="fragment" data-fragment-index="1" -->
+### in the cloud somewhere? <!-- .element: class="fragment" data-fragment-index="2" -->
+
+----
+
+<!-- .slide: data-background="images/works-on-my-machine.jpg" data-background-size="60%" -->
+
+---
+
+<!-- .slide: data-background="images/docker.png" -->
+
+----
+
+## The premise of Docker:
+
+# Build once,
+# run anywhere
 
 ----
 
 # What is Docker?
 
-----
-
-## Virtualization tool?
-
-Figure vmware, virtualbox
+> <font color="#ccc">**Docker separates applications from infrastructure using container technology**</font>,
+> similar to how virtual machines separate the OS from bare metal
 
 ----
-
-## VM manager?
-
-Figure vagrant
-
-----
-
-## Configuration manager?
-
-Figure Puppet, Chef, Ansible
-
-----
-
-## cgroups? LXC? libvirt?
-
-
-
----
 
 ## VMs vs Containers
 
-Figure vms vs containers
+![VMs vs Containers](images/vms-vs-containers.png)
+
+----
+
+# Docker benefits
+
+- Rapid application deployment
+- Portability across machines
+- Version control and component reuse
+- Sharing
+- Lightweight footprint and minimal overhead
+
+
+----
+
+# Docker architecture
+![Docker architecture](images/docker-architecture.svg)
+
+----
+
+## Docker on Windows or OS X
+
+![Docker in Windows](images/docker-windows.svg)
 
 ----
 
@@ -152,8 +196,10 @@ Figure vms vs containers
 
 ### Your applications run in containers
 
-code: docker run ubuntu /bin/echo "Hello World"
+```
+$ docker run ubuntu /bin/echo "Hello World"
 Hello World
+```
 
 ----
 
@@ -161,7 +207,15 @@ Hello World
 
 ### Saved states of Containers
 
-Code: docker images
+```
+$ docker images
+REPOSITORY       TAG      IMAGE ID      CREATED      VIRTUAL SIZE
+training/webapp  latest   fc77f57ad303  3 weeks ago  280.5 MB
+ubuntu           13.10    5e019ab7bf6d  4 weeks ago  180 MB
+ubuntu           12.04    74fe38d11401  4 weeks ago  209.6 MB
+ubuntu           12.10    a7cf8ae4e998  4 weeks ago  171.3 MB
+ubuntu           14.04    99ec81b80c55  4 weeks ago  266 MB
+```
 
 ----
 
@@ -169,7 +223,20 @@ Code: docker images
 
 ### Series of commands to build an image
 
-code: dockerfile example
+```
+FROM ubuntu:12.04
+
+RUN apt-get update
+RUN apt-get install -y apache2
+
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
+EXPOSE 80
+
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+```
 
 ----
 
@@ -177,28 +244,23 @@ code: dockerfile example
 
 ### Public repository for Docker images
 
-Figure screenshot
+![Docker Hub](images/docker-hub.png)
 
----
+----
 
 # Docker in numbers
 
-- Launched in March 2013
-- 21,000+ GitHub Stars
-- 1B+ Docker Container Downloads
-- 240,000+ Dockerized apps in Docker Hub
-- 1600+ Community Contributors
-- 50,000 Third party projects using Docker
-- 200+ Meet Up groups
+- Launched in <font color="#fff">**March 2013**</font>
+- <font color="#fff">**21,000+**</font> GitHub Stars
+- <font color="#fff">**1B+**</font> Docker Container Downloads
+- <font color="#fff">**240,000+**</font> Dockerized apps in Docker Hub
+- <font color="#fff">**1600+**</font> Community Contributors
+- <font color="#fff">**50,000**</font> Third party projects using Docker
+- <font color="#fff">**200+**</font> Meet Up groups
 
 ----
 
-# Docker ecosystem
-
-Figure ecosystem
-
-----
-
+<!-- .slide: data-background="images/docker-ecosystem.jpg" data-background-size="80%" -->
 
 ---
 
