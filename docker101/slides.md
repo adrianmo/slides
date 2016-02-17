@@ -4,7 +4,7 @@ by *Adrian Moreno Martinez*
 
 ---
 
-## Before
+## A decade ago
 
 - Monolithic apps
 - Build on a single stack such as Java or .NET
@@ -130,15 +130,16 @@ by *Adrian Moreno Martinez*
 
 ----
 
-## You can surely install it in a production server
+## You can surely install it
+## in a production server
 
 ----
 
 ## But... would it look the same in
 
-### your dev environment?
-### in a lab? <!-- .element: class="fragment" data-fragment-index="1" -->
-### in the cloud somewhere? <!-- .element: class="fragment" data-fragment-index="2" -->
+## your dev environment?
+## or in a lab? <!-- .element: class="fragment" data-fragment-index="1" -->
+## or in the cloud somewhere? <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ----
 
