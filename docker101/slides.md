@@ -1,6 +1,6 @@
 # Intro to containers and Docker
 
-by *Adrian Moreno*
+by *Adrian Moreno Martinez*
 
 ---
 
@@ -260,9 +260,18 @@ CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
 ----
 
+# Google Trends
+
+![Google Trends](images/google-trends.png) <!-- .element: height="70%" -->
+
+----
+
 <!-- .slide: data-background="images/docker-ecosystem.jpg" data-background-size="80%" -->
 
 ---
 
+<!-- .slide: data-background="images/demo-time.jpg" data-background-size="55%" -->
+
+---
 
 # FIN
