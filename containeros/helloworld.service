@@ -1,0 +1,15 @@
+Unit]
+Description=Hello World
+Requires=flanneld.service
+After=flanneld.service
+
+[Service]
+Restart=on-failure
+ExecStartPre=-/usr/bin/docker kill helloworld
+ExecStartPre=-/usr/bin/docker rm helloworld
+ExecStartPre=/usr/bin/docker pull tutum/hello-world
+ExecStart=/usr/bin/docker run --name helloworld \
+                              -d \
+                              -P \
+                              tutum/hello-world
+ExecStop=/usr/bin/docker stop helloworld
