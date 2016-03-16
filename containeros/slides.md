@@ -1,20 +1,32 @@
-# The new minimalist operating systems
+# Container-focused operating systems
 
 by *Adrian Moreno Martinez*
 
 ---
 
-- Designed to host container applications
-- Simplify infrastructure
+## Everything runs on a container
+
+**`Docker`**, `rkt`, `Garden`, ...
 
 ----
 
-## Common features
+## Small footprint
 
-- Stability is enhanced through transactional upgrade/rollback semantics
-- Traditional package managers are absent
-- Security is enhanced through isolation mechanisms
-- `systemd` provides system/service management
+tens of MB **VS** hundreds of MB
+
+----
+
+## Atomic upgrade/rollback
+
+----
+
+## No package managers
+
+`apt-get`, `yum`, `dnf`, ...
+
+----
+
+## Tools for cluster management, container announcement, and discovery
 
 ---
 
@@ -26,7 +38,35 @@ by *Adrian Moreno Martinez*
 
 - Released December 2014
 - Originally JeOS, “Just Enough OS”
-- AppArmor packaging tool
+- Transactional updates and rollbacks
+- AppArmor kernel security
+- Snaps: `apps` and `frameworks`
+
+----
+
+## Frameworks
+
+- Third-party services that provide the runtime and dependencies to applications
+- Extend the system and mediate access to shared resources
+- `Docker` is the first supported framework
+
+----
+
+## Applications
+
+- Run within the context of frameworks
+- Containerized apps are Snaps within a `Docker` framework
+- Each Snapp is packaged and deployed in an isolated manner
+
+----
+
+## Snappy architecture
+
+![Snappy Ubuntu](images/snappy-arch.png)
+
+----
+
+# Snappy demo
 
 ---
 
@@ -37,10 +77,11 @@ by *Adrian Moreno Martinez*
 ----
 
 - Released April 2014
-- Supported by RedHat
+- Created by RedHat
 - Fedora, RHEL, and CentOS Atomic releases
 - Replaces `yum` with `rpm-ostree`
 - SELinux is enabled
+- Cockpit
 
 ---
 
@@ -51,8 +92,8 @@ by *Adrian Moreno Martinez*
 ----
 
 - Released February 2015
-- Just 20 MB
-- System Docker and User Docker
+- Superminimal OS - just 20 MB
+- System Docker (PID 1) and User Docker
 - Simple Updates and Rollbacks
 
 ----
@@ -60,6 +101,10 @@ by *Adrian Moreno Martinez*
 <!-- .slide: data-background="#333" -->
 
 ![Architecture](images/rancheros_img1.png)
+
+----
+
+# RANCHER DEMO
 
 ---
 
@@ -71,8 +116,9 @@ by *Adrian Moreno Martinez*
 
 - Released April 2015
 - Created by VMware
-- Integration to vSphere, vCloud, NSX, vSAN...
+- Optimized for vSphere, vCloud, NSX, vSAN...
 - Compatible with Docker, rkt, and Pivotal Garden
+- Project Lightwave
 
 ---
 
@@ -81,11 +127,27 @@ by *Adrian Moreno Martinez*
 ----
 
 - Released August 2013
-- Derivative of Chromium OS (and by extension Gentoo)
 - Designed to simplify deployment in clustered environments
-- Release channels: alpha, beta, and stable
+- Release channels: `alpha`, `beta`, and `stable`
+- Dual root partition
 - Cloud-Init support
-- Comes with `etcd` and `fleet`
+- Comes with `etcd`, `rkt`, `fleet`, `flannel`, ...
+
+----
+
+![CoreOS Updates](images/coreos-update1.png)
+
+CoreOS is currently booted off partition A. An update is installed onto partition B
+
+----
+
+![CoreOS Updates](images/coreos-update2.png)
+
+Machine is rebooted onto the B partition
+
+----
+
+![CoreOS app](images/coreos-app.png)
 
 ----
 
@@ -159,9 +221,9 @@ fleetctl start helloworld.service
 - Unique routable IP per container inside the cluster
 - Reduces complexity; avoids port mappings
 
----
+----
 
-<!-- .slide: data-background="images/demo.jpg" data-background-size="70%" -->
+# COREOS DEMO
 
 ---
 
