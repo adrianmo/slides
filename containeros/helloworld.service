@@ -1,4 +1,4 @@
-Unit]
+[Unit]
 Description=Hello World
 Requires=flanneld.service
 After=flanneld.service
@@ -9,7 +9,9 @@ ExecStartPre=-/usr/bin/docker kill helloworld
 ExecStartPre=-/usr/bin/docker rm helloworld
 ExecStartPre=/usr/bin/docker pull tutum/hello-world
 ExecStart=/usr/bin/docker run --name helloworld \
-                              -d \
                               -P \
                               tutum/hello-world
 ExecStop=/usr/bin/docker stop helloworld
+
+[X-Fleet]
+Global=true
