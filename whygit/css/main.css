@@ -3,3 +3,8 @@
   box-shadow: 0 0 0 !important;
   background: none;
 }
+
+code.single {
+  font-size: 70px !important;
+  color: #3b759e;
+}

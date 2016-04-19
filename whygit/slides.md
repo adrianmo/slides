@@ -53,11 +53,39 @@ by *Adrian Moreno Martinez*
 
 Everything starts with a
 
-`git clone`
+<code class="single">git clone</code>
 
 or
 
-`git init`
+<code class="single">git init</code>
+
+----
+
+```bash
+$ git clone https://github.com/tgndevs/slack-autoinvite.git
+
+Cloning into 'slack-autoinvite'...
+remote: Counting objects: 203, done.
+remote: Total 203 (delta 0), reused 0 (delta 0), pack-reused 203
+Receiving objects: 100% (203/203), 139.14 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (82/82), done.
+Checking connectivity... done.
+```
+
+----
+
+```bash
+$ git init
+# Initialize the local directory as a Git repository
+
+$ git remote add origin https://github.com/user/repo.git
+# Set a new remote
+
+git remote -v
+# Verify new remote
+origin  https://github.com/user/repo.git (fetch)
+origin  https://github.com/user/repo.git (push)
+```
 
 ----
 
@@ -65,24 +93,17 @@ or
 
 ----
 
-## Add a remote repository
-
-(if you have not cloned an existing one)
-
-
-`git remote add origin <server>`
-
-----
-
 ## Pushing changes
 
-`git push origin master`
+<code class="single">git push origin master</code>
 
 ---
 
 # Git Workflow
 
 ----
+
+## Master branch
 
 ![Master branch](images/master_branch.svg)
 
@@ -123,7 +144,7 @@ a.k.a. Merge-request
 
 ----
 
-![GitHub](images/github.png)
+<img src="images/github.png" alt="GitHub" style="width: 70%;"/>
 
 - Reference git hosting for open source projects
 - Free for open source repos
@@ -150,7 +171,7 @@ a.k.a. Merge-request
 
 ----
 
-![GitLab](images/gitlab.svg)
+<img src="images/gitlab.svg" alt="GitHub" style="width: 70%;"/>
 
 - On-premises and hosted
 - Unlimited repos and collaborators on hosted offering
