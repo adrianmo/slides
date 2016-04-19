@@ -1,0 +1,178 @@
+# Why should I be using Git?
+
+by *Adrian Moreno Martinez*
+
+---
+
+<img src="images/git_logo.png" alt="Git" style="width: 50%;"/>
+
+> Git is an **open source**, **distributed** version control system designed for speed and efficiency
+
+----
+
+## Git facts
+
+- Started in 2005
+- Created by *Linus Torvald* to help in Linux kernel development
+- Available in most OS
+- It is a de facto standard
+
+----
+
+## Git key features
+
+- Distributed version control
+- Everything is local (full history tree available offline)
+- Branching and merging model
+- Fast
+
+----
+
+## Other version control systems
+
+- Subversion (SVN)
+- CVS
+- Perforce
+- Mercurial
+- Bazaar
+- ...
+
+----
+
+## Centralized workflow
+
+<img src="images/central_repo.png" alt="Centralized workflow" style="width: 50%;"/>
+
+----
+
+## Distributed workflow
+
+<img src="images/distributed_repo.png" alt="Distributed development" style="width: 50%;"/>
+
+---
+
+Everything starts with a
+
+`git clone`
+
+or
+
+`git init`
+
+----
+
+![Staging area](images/staging_area.png)
+
+----
+
+## Add a remote repository
+
+(if you have not cloned an existing one)
+
+
+`git remote add origin <server>`
+
+----
+
+## Pushing changes
+
+`git push origin master`
+
+---
+
+# Git Workflow
+
+----
+
+![Master branch](images/master_branch.svg)
+
+----
+
+## New Feature branch
+
+![Feature branch](images/feature_branch.png)
+
+----
+
+## Fast-forward Merge
+
+![Fast-forward merge](images/merge_ff.png)
+
+----
+
+## 3-Way Merge
+
+![3-way merge](images/merge_3w.png)
+
+----
+
+![Gitflow](images/gitflow.svg)
+
+----
+
+## Pull-request
+
+a.k.a. Merge-request
+
+![Pull-Request](images/pull-request.png)
+
+
+---
+
+# Git Hosting
+
+----
+
+![GitHub](images/github.png)
+
+- Reference git hosting for open source projects
+- Free for open source repos
+- Paid for private repos
+- Unlimited number of collaborators
+- GitHub Enterprise On-premises
+
+----
+
+![BitBucket](images/bitbucket.png)
+
+- Unlimited private repos
+- Free for small teams (up to 5 users)
+- Unintuitive UI
+
+----
+
+![Stash](images/stash.png)
+
+- Now known as BitBucket Server
+- On-premises
+- Integration with Atlassian tools (Jira, HipChat, Bamboo, ...)
+- $10 up to 10 users, $1.800 up to 25 users, ...
+
+----
+
+![GitLab](images/gitlab.svg)
+
+- On-premises and hosted
+- Unlimited repos and collaborators on hosted offering
+- Free Community Edition
+- Comes with GitLab CI for continuous integration and delivery
+
+---
+
+# Useful Tools
+
+----
+
+## SourceTree
+
+![SourceTree](images/sourcetree.png)
+
+----
+
+![Command Line](images/command_line.jpg)
+
+---
+
+# FIN
+
+http://adrianmo.github.io/slides/whygit
