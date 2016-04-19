@@ -21,10 +21,12 @@ by *Adrian Moreno Martinez*
 
 ## Git key features
 
-- Distributed version control
+- Distributed nature
 - Everything is local (full history tree available offline)
 - Branching and merging model
+- No access control
 - Fast
+- Light
 
 ----
 

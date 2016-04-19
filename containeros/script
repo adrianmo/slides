@@ -1,0 +1,54 @@
+
+Snappy
+------
+
+apt-get update
+snappy --help
+snappy info
+snappy list -v
+snappy list -uv
+snappy search docker
+sudo snappy install docker
+snappy list
+snappy info
+docker version
+docker ps
+sudo snappy install hello-world
+sudo snappy update ubuntu-core
+sudo snappy rollback ubuntu-core
+apparmor_status
+
+
+RancherOS
+---------
+
+uname -a
+ps | more --> PID 1 system docker
+          --> PID X user docker
+docker ps
+sudo system-docker ps
+sudo system-docker logs ntp
+
+sudo rancherctl help
+sudo rancherctl os
+sudo rancherctl os version
+sudo rancherctl os list
+sudo rancherctl os upgrade?
+
+
+CoreOS
+------
+
+vagrant up
+vagrant ssh core-01
+systemctl status etcd2, fleet, flanneld
+etcdctl member list
+etcdctl ls ...
+etcdctl set ... check in another node
+etcdctl see flannel network
+
+fleetctl list-units
+fleetctl list-machines
+create helloworld.service
+fleetctl start helloworld.service
+check on other machines
