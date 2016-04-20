@@ -19,17 +19,6 @@ by *Adrian Moreno Martinez*
 
 ----
 
-## Git key features
-
-- Distributed nature
-- Everything is local (full history tree available offline)
-- Branching and merging model
-- No access control
-- Fast
-- Light
-
-----
-
 ## Other version control systems
 
 - Subversion (SVN)
@@ -38,6 +27,17 @@ by *Adrian Moreno Martinez*
 - Mercurial
 - Bazaar
 - ...
+
+----
+
+## Git key features
+
+- Distributed nature
+- Everything is local (full history tree available offline)
+- Branching and merging model
+- No access control
+- Fast
+- Light
 
 ----
 
