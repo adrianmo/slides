@@ -32,7 +32,7 @@ by *Adrian Moreno Martinez*
 
 ---
 
-## Industries are being disrupted
+## Traditional industries are being disrupted
 
 ----
 
