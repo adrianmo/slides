@@ -238,6 +238,8 @@ production:
 
 > Treat backing services as attached resources
 
+<br>
+
 - e.g. datastore, mail service, cache, message broker
 - Allows changing of service without code changes
 - Makes no distinction between **local** and **third-party** services
@@ -362,7 +364,10 @@ production:
 
 > Run admin/management tasks as one-off processes
 
-- e.g. Database migrations, console, one-time scripts
+<br>
+
+- Database migrations, console, one-time scripts
+- e.g. `python manage.py migrate`
 - Run as **separate** process
 - **Admin code** ships with **app code**
 
