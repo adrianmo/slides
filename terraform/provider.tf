@@ -4,6 +4,7 @@ provider "openstack" {
     user_name  = "admin"
     tenant_name = "admin"
     password  = "admin123"
-    auth_url  = "https://10.246.151.33:6100/v3"
+    /*auth_url  = "https://10.246.151.33:6100/v3"*/
+    auth_url  = "https://10.246.151.160:6100/v3"
     insecure = true
 }
