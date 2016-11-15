@@ -36,7 +36,7 @@ resource "openstack_compute_instance_v2" "instance_1" {
 
 
 
-/*resource "openstack_compute_floatingip_v2" "floatip_2" {
+resource "openstack_compute_floatingip_v2" "floatip_2" {
   pool = "public"
 }
 
@@ -51,4 +51,4 @@ resource "openstack_compute_instance_v2" "instance_2" {
     uuid = "${openstack_networking_network_v2.network_1.id}"
     floating_ip = "${openstack_compute_floatingip_v2.floatip_2.address}"
   }
-}*/
+}
