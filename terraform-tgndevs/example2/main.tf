@@ -33,7 +33,7 @@ resource "aws_security_group" "sg_1" {
 
 resource "aws_key_pair" "key_pair_1" {
   key_name   = "my-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwelPtXGNTbGQRgzWL8ay7ucQ9U4qsP6/DvGyNz3YNwFCZGr/hm6lgpneBxyxNUL4BTygqYnyFH8Dq//A6tzdrRJZUTE1unmlmoXgTGC8TWJxW57D1d6vpjSEa6BbL2AK6dFX7K8h9dsr5SQuR3IWqkbGVIwQkDX9RkrFxxv45sOB4aRYVIUrxKyB6DE0JZMgy3abmDbNIbsUMDpJJJn5XXqhGyUrnaXvckGYu1GyUuzObLrpmW0e9pB4hlgkI5lL0NJS1DSf7Vn8bJtsz67LwWpByfdK2FpP3VNlBBUtm5NgBfaaMN/64oHaNEZtCbGwYBlMnYs/pzkmsy6RrypWd adrifx@gmail.com"
+  public_key = "${file("~/.ssh/id_rsa.pub")}"
 }
 
 resource "aws_instance" "instance_1" {

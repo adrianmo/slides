@@ -3,3 +3,7 @@
   box-shadow: none;
   background: none;
 }
+
+.reveal pre {
+    box-shadow: none;
+}
