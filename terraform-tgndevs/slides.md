@@ -43,11 +43,12 @@ You can deploy infrastructure manually...
 
 ----
 
-<img src="img/terraform.png" width="40%">
+<img src="img/terraform.png" width="30%">
 
-> Terraform is kind of like Puppet for infrastructure
+> Terraform is a tool for creating, changing, and versioning infrastructure safely and predictably 
 >
-> -- <cite>Somebody</cite>
+> -- <cite>terraform.io</cite>
+
 
 ----
 
