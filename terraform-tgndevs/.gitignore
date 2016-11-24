@@ -10,4 +10,6 @@ tmp/**
 node_modules/
 .sass-cache
 css/reveal.min.css
-js/reveal.min.js*.tfstate*
+js/reveal.min.js
+*.tfstate*
+provider.tf

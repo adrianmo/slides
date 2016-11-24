@@ -4,7 +4,9 @@ with
 
 <br><br>
 
-by *Adrian Moreno Martinez*
+by <font color="#2196F3">*Adrián Moreno Martínez*</font>
+<br>
+@ *Tarragona Developers Meetup - 24/11/2016*
 
 ---
 
@@ -28,10 +30,10 @@ You can deploy infrastructure manually...
 <br>
 
 1. Repeatability
-2. Automation
-3. Version Control
-4. Code Review
-5. Documentation
+2. Automation<!-- .element: class="fragment" -->
+3. Version Control<!-- .element: class="fragment" -->
+4. Code Review<!-- .element: class="fragment" -->
+5. Documentation<!-- .element: class="fragment" -->
 
 ---
 
@@ -93,9 +95,11 @@ You can deploy infrastructure manually...
 
 <br>
 
-* DNS MX Records with CloudFlare
-* Data analytics for spam with AWS
-* Mail storage on OpenStack, instances with attached block storage volumes
+* DNS MX Records with **CloudFlare**
+* <!-- .element: class="fragment" -->Data analytics for spam with **AWS**
+* <!-- .element: class="fragment" -->Mail storage on **OpenStack**, instances with attached block storage volumes
+* <!-- .element: class="fragment" -->Monitoring and alerting service with **Datadog**
+
 
 ---
 
@@ -128,7 +132,7 @@ You can deploy infrastructure manually...
 ## Resources
 
 <br>
-* Each provider has a set of resources implemented
+* Each provider has a set of resources available
 * e.g. AWS:
   * `aws_instance`, `aws_ebs_volume`, `aws_key_pair`, ...
   * https://www.terraform.io/docs/providers/aws/index.html
@@ -140,9 +144,9 @@ You can deploy infrastructure manually...
 <br>
 
 * local-exec
-* remote-exec
-* file
-* Chef
+* <!-- .element: class="fragment" -->remote-exec
+* <!-- .element: class="fragment" -->file
+* <!-- .element: class="fragment" -->Chef
 
 ----
 
@@ -207,15 +211,16 @@ Example:
 
 ```
 module "consul" {
-    source = "github.com/hashicorp/consul/terraform/aws"
-    servers = 3
+    source  = "github.com/hashicorp/consul/terraform/aws"
+    servers = 5
+    version = "0.4.0"
 }
 ```
 
 ---
 
 ```plain
-$ terraform
+$ terraform --help
 ```
 
 ```plain
@@ -415,9 +420,9 @@ Destroy complete! Resources: 4 destroyed.
 * Using [gitflow](http://danielkummer.github.io/git-flow-cheatsheet/) (feature branches)
 * Lock master branch
 * New push into feature branch
-  * `terraform production init` + `plan`
+  * `terraform plan`
 * Feature merged into master branch
-  * `terraform production init` + `plan` + `apply`
+  * `terraform plan` + `apply`
 
 ---
 
@@ -427,4 +432,6 @@ Destroy complete! Resources: 4 destroyed.
 
 <br><br><br>
 
+<font size="22">
 [adrianmo.github.io/slides/terraform-tgndevs](http://adrianmo.github.io/slides/terraform-tgndevs)
+</font>
