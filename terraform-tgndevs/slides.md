@@ -14,7 +14,7 @@ by <font color="#2196F3">*Adrián Moreno Martínez*</font>
 
 ----
 
-You can deploy infrastructure manually...
+You can deploy infrastructure...
 
 <img src="img/aws_console.png" width="90%">
 
@@ -45,7 +45,7 @@ You can deploy infrastructure manually...
 
 <img src="img/terraform.png" width="30%">
 
-> Terraform is a tool for creating, changing, and versioning infrastructure safely and predictably 
+> Terraform is a tool for creating, changing, and versioning infrastructure safely and predictably
 >
 > -- <cite>terraform.io</cite>
 
