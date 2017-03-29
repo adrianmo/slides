@@ -46,7 +46,7 @@ class: center, middle
 
 <br>
 
-<h3 class="center">Fernando Ripoll (CoBrowser.net) &amp; Adrián Moreno (Dell EMC)</h3>
+<h3 class="center">Fernando Ripoll <span style="color: gray;">(CoBrowser.net)</span> &amp; Adrián Moreno <span style="color: gray;">(Dell EMC)</span></h3>
 
 
 <h3 class="center">Tarragona Developers Meetup @ 29th March 2017</h3>
@@ -116,14 +116,14 @@ class: center, middle
 # master node
 
 * Contains the required control plane components
-  * i.e. etcd, API server, scheduler, controller manager, DNS
+  * i.e. etcd, API server, scheduler, controller manager
 * Contains other optional addons
-  * e.g. User interface, monitoring, logging, etc.
+  * e.g. DNS, User interface, monitoring, logging, etc.
 * Support for HA multi-master environments
 
 ---
 
-# master node (cont'd)
+# master node
 
 ### etcd
 
@@ -137,7 +137,7 @@ class: center, middle
 
 ---
 
-# master node (cont'd)
+# master node
 
 ### kube-controller-manager
 
@@ -147,11 +147,12 @@ class: center, middle
 
 ---
 
-# master node (cont'd)
+# master node
 
 ### kube-scheduler
 
 * Binds unscheduled pods to nodes
+* Tracks resource utilization
 * Pluggable by design
 * Applies predicates (filters) and priorities (sorting)
 
@@ -160,7 +161,6 @@ class: center, middle
 # node (aka minion)
 
 * Worker machine in Kubernetes
-* Can be a VM or a physical machine
 * Has the container runtime installed (Docker by default)
 * Also the `kubelet` and `kube-proxy` services
 
@@ -196,39 +196,27 @@ class: center, middle
 
 ---
 
-```json
-{
-  "kind": "Pod",
-  "apiVersion": "v1",
-  "metadata": {
-    "name": "redis-django",
-    "labels": {
-      "app": "webapp"
-    }
-  },
-  "spec": {
-    "containers": [
-      {
-        "name": "key-value-store",
-        "image": "redis",
-        "ports": [
-          {
-            "containerPort": 6379
-          }
-        ]
-      },
-      {
-        "name": "frontend",
-        "image": "django",
-        "ports": [
-          {
-            "containerPort": 8000
-          }
-        ]
-      }
-    ]
-  }
-}
+# pod
+
+#### Example:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-django
+  labels:
+    name: webapp
+spec:
+  containers:
+  - name: key-value-store
+    image: redis
+    ports:
+    - containerPort: 6379
+  - name: frontend
+    image: django
+    ports:
+    - containerPort: 8080
 ```
 
 ---
@@ -302,6 +290,8 @@ tier notin (frontend, backend)
 
 # Replication Controller / Deployment
 
+#### Example:
+
 ```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -334,6 +324,8 @@ spec:
 * Set of pods that are defined by the same selector
 * Traffic to the service is load-balanced to pods by Kubernetes
 
+#### Example:
+
 ```yaml
 apiVersion: v1
 kind: Service
@@ -359,12 +351,6 @@ spec:
 ---
 
 <img src="img/kubernetes-services.png" style="width:100%;">
-
----
-
-# Kubernetes architecture
-
-<img src="img/k8s_architecture_overview.png" style="width:100%;">
 
 ---
 
