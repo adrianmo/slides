@@ -175,5 +175,5 @@ Not this log
 <br><br><br>
 
 <font size="22">
-[adrianmo.github.io/slides/log-architectures](http://adrianmo.github.io/slides/log-architectures)
+[adrianmo.github.io/slides/log-architecture](http://adrianmo.github.io/slides/log-architecture)
 </font>
