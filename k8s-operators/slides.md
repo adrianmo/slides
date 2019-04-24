@@ -85,6 +85,8 @@ by [*Adrián Moreno Martínez*](https://github.com/adrianmo)</font>
 
 ---
 
+<!-- .slide: data-background-color="#fafbfd" -->
+
 ## Operators out there
 
 ![](img/operators-list.png)
