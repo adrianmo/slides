@@ -71,9 +71,9 @@ by [*Adrián Moreno Martínez*](https://github.com/adrianmo)</font>
 
 ## Why?
 
-- The thing you want to ***control*** isn't an app
 - I want to make something ***complex*** simpler to deploy
 - I'm working with ***data*** and some operators must be ***tightly controlled***
+- I want to ***optimize*** how my app runs in Kubernetes
 
 ---
 
